@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills Predictor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <div class="container">
+        <h1>Soft Skills Predictor</h1>
+        <form id="skillsForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="stdHours">How Many Hours do You Practice per Day:</label>
+            <input type="number" id="stdHours" name="stdHours" min="1" max="24" required>
+
+            <label for="fluency">Rate Yourself in Fluency out of 10:</label>
+            <input type="number" id="fluency" name="fluency" min="1" max="10" required>
+
+            <label for="vocabulary">Rate Yourself in Vocabulary out of 10:</label>
+            <input type="number" id="vocabulary" name="vocabulary" min="1" max="10" required>
+
+            <label for="confidence">What is Your Confidence Level out of 20:</label>
+            <input type="number" id="confidence" name="confidence" min="1" max="20" required>
+
+            <input type="submit" value="Get Insights">
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+<script src="./first.js"></script>
+</html>
