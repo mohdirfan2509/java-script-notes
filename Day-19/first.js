@@ -11,26 +11,29 @@
 
 // })
 
-fetch("https://api.github.com/users").then((response) => {
-    return response.json();
-}).then((data) => {
-    const parent = document.getElementById('first');
+// fetch("https://api.github.com/users").then((response) => {
+//     if(!response.ok){
+//         throw new Error("Data is not present in server !!")
+//     }
+//     return response.json();
+// }).then((data) => {
+//     const parent = document.getElementById('first');
 
-    for (let i = 0; i < 30; i++) {
-        const image = document.createElement('img');
-        image.src = data[i].avatar_url;
-        image.style.height = "400px"
-        image.style.width = "400px"
-        parent.append(image)
+//     for (let i = 0; i < 30; i++) {
+//         const image = document.createElement('img');
+//         image.src = data[i].avatar_url;
+//         image.style.height = "400px"
+//         image.style.width = "400px"
+//         parent.append(image)
 
-    }
+//     }
 
 
-}).catch((error) => {
-    const parent = document.getElementById('first');
-    parent.textContent=error.message;
+// }).catch((error) => {
+//     const parent = document.getElementById('first');
+//     parent.textContent=error.message;
 
-})
+// })
 
 // console.log("Hello World Last");
 
@@ -52,6 +55,18 @@ fetch("https://api.github.com/users").then((response) => {
 
 // let javaScriptObj =JSON.parse(jsonFmt)
 // console.log(javaScriptObj);
+
+const p1= new Promise((resolve,reject)=>{
+    
+    reject("Hello Rejected !!");
+    resolve("Hello Resolved !!");
+})
+
+p1.then((response)=>{
+    console.log(response);
+}).catch((error)=>{
+    console.log(error);
+})
 
 
 
